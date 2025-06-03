@@ -6,23 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bunga Untuk Kamu</title>
   <style>
+    /* CSS kamu (sama persis dengan yang kamu kirim) */
     .text {
-  position: absolute;
-  bottom: 4vmin;
-  text-align: center;
-  font-size: 4vmin;
-  color: #fff;
-  opacity: 0;
-  animation: fade-in 2s 2s ease forwards;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  text-shadow: 2px 2px 4px #000;
-}
+      position: absolute;
+      bottom: 4vmin;
+      text-align: center;
+      font-size: 4vmin;
+      color: #fff;
+      opacity: 0;
+      animation: fade-in 2s 2s ease forwards;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-shadow: 2px 2px 4px #000;
+    }
 
-@keyframes fade-in {
-  to {
-    opacity: 1;
-  }
-}
+    @keyframes fade-in {
+      to {
+        opacity: 1;
+      }
+    }
 
     * {
       margin: 0;
@@ -45,6 +46,7 @@
       flex-direction: column;
       overflow: hidden;
       font-family: 'Segoe UI', sans-serif;
+      position: relative;
     }
 
     .text {
@@ -60,12 +62,10 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-   .flower {
-  position: relative;
-  transform: translateY(15vmin);
-}
-
-
+    .flower {
+      position: relative;
+      transform: translateY(15vmin);
+    }
 
     .flower__glass {
       width: 20vmin;
@@ -278,92 +278,4 @@
     }
 
     @keyframes open-flower {
-      0% {
-        transform: translateX(-50%) rotate(0);
-      }
-    }
-
-    @keyframes open-flowe--middle {
-      0% {
-        opacity: 0;
-        transform: translateX(-50%) scale(0);
-      }
-    }
-
-    @keyframes flower-fall-down-pink {
-      0% { transform: rotate(-55deg); }
-      50% { transform: rotateX(-100deg); }
-      100% { transform: translate(2vmin, 28vmin); }
-    }
-
-    @keyframes flower-fall-down-yellow {
-      0% { transform: rotate(-55deg); }
-      50% { bottom: 3vmin; transform: rotateX(-100deg); }
-      100% { transform: translate(2vmin, 70vmin) rotate(150deg); }
-    }
-
-    @keyframes flower-fall-down-purple {
-      0% { transform: rotate(-50deg); }
-      25% { bottom: 1vmin; transform: rotateX(-100deg); perspective: 0px; }
-      50% { perspective: 0px; transform: translate(-30vmin, 2vmin) rotate(90deg); }
-      75% { perspective: 0px; transform: translate(-34vmin, -2vmin); }
-      100% { transform: translate(-34vmin, -2vmin) rotateY(-80deg) rotateX(35deg); }
-    }
-
-    @keyframes flower-falling {
-      0%, 100% { transform: translate(-34vmin, -2vmin) rotateY(-80deg) rotateX(35deg); }
-      25% { transform: translate(-34.4vmin, -2vmin) rotateY(-84deg) rotateX(35deg); }
-      50% { transform: translate(-32vmin, -4.2vmin) rotateY(-80deg) rotateX(35deg); }
-      75% { transform: translate(-36vmin, 1.1vmin) rotateY(-80deg) rotateX(35deg); }
-    }
-  </style>
-</head>
-<body>
-  <h1 class="text">Ini buat kamu 💖</h1>
-  <div class="flower">
-    <div class="flower-pp">
-      <div class="flower_l"></div>
-      <div class="f">
-        <div class="leaf leaf--1"></div>
-        <div class="leaf leaf--2"></div>
-        <div class="leaf leaf--3"></div>
-        <div class="leaf leaf--4"></div>
-        <div class="leaf leaf--5"></div>
-        <div class="leaf leaf--6"></div>
-        <div class="leaf leaf--7"></div>
-        <div class="leaf leaf--8 flower__fall-down--yellow"></div>
-      </div>
-    </div>
-
-    <div class="flower-pp flower-pp--2">
-      <div class="flower_l"></div>
-      <div class="f">
-        <div class="leaf leaf--1"></div>
-        <div class="leaf leaf--2"></div>
-        <div class="leaf leaf--3"></div>
-        <div class="leaf leaf--4"></div>
-        <div class="leaf leaf--5"></div>
-        <div class="leaf leaf--6"></div>
-        <div class="leaf leaf--7"></div>
-        <div class="leaf leaf--8 flower__fall-down--pink"></div>
-      </div>
-    </div>
-
-    <div class="flower-pp flower-pp--3">
-      <div class="flower_l"></div>
-      <div class="f">
-        <div class="leaf leaf--1"></div>
-        <div class="leaf leaf--2"></div>
-        <div class="leaf leaf--3"></div>
-        <div class="leaf leaf--4"></div>
-        <div class="leaf leaf--5"></div>
-        <div class="leaf leaf--6"></div>
-        <div class="leaf leaf--7"></div>
-        <div class="leaf leaf--8 flower__fall-down--purple"></div>
-      </div>
-    </div>
-
-    <div class="flower__glass"></div>
-  </div>
-</body>
-</html>
+      
