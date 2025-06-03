@@ -37,8 +37,16 @@
       text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
     }
 
-    .love-button, .next-button {
+    .button-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
       margin-top: 30px;
+      z-index: 2;
+      position: relative;
+    }
+
+    .love-button, .next-button {
       padding: 15px 30px;
       font-size: 18px;
       background-color: #ff4d6d;
@@ -48,8 +56,6 @@
       cursor: pointer;
       box-shadow: 0 5px 15px rgba(255, 77, 109, 0.4);
       transition: transform 0.2s ease, background-color 0.3s ease;
-      z-index: 2;
-      position: relative;
     }
 
     .love-button:hover, .next-button:hover {
@@ -57,7 +63,6 @@
       background-color: #ff1e4b;
     }
 
-    /* Gaya untuk GIF pojok */
     .gif-left, .gif-right, .gif-bottom-left, .gif-bottom-right {
       position: absolute;
       width: 100px;
@@ -102,11 +107,14 @@
   <!-- Teks hadiah -->
   <div class="text">Aku ada hadiah buat kamu ❤️</div>
 
-  <!-- Tombol untuk aktifkan musik -->
-  <button id="unmuteBtn" class="love-button">Putar Musik</button>
+  <!-- Wrapper tombol -->
+  <div class="button-wrapper">
+    <!-- Tombol untuk aktifkan musik -->
+    <button id="unmuteBtn" class="love-button">Putar Musik</button>
 
-  <!-- Tombol lanjut ke halaman berikutnya -->
-  <button class="next-button" onclick="location.href='halaman2.html'">Lanjut ke Halaman Berikutnya</button>
+    <!-- Tombol lanjut ke halaman berikutnya -->
+    <button class="next-button" onclick="location.href='halaman2.html'">Lanjut ke Halaman Berikutnya</button>
+  </div>
 
   <!-- Musik autoplay mute dulu -->
   <audio id="musik" src="musik.mp3" autoplay loop muted></audio>
@@ -116,9 +124,9 @@
     const btn = document.getElementById('unmuteBtn');
 
     btn.addEventListener('click', () => {
-      musik.muted = false;  // buka mute supaya suara keluar
-      musik.play();         // mainkan musik
-      btn.style.display = 'none'; // sembunyikan tombol setelah klik
+      musik.muted = false;
+      musik.play();
+      btn.style.display = 'none'; // sembunyikan tombol musik
     });
   </script>
 
