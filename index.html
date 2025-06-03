@@ -95,11 +95,22 @@
   <!-- Teks hadiah -->
   <div class="text">Aku ada hadiah buat kamu ❤️</div>
 
-  <!-- Tombol Love -->
-  <button class="love-button" onclick="window.location.href='halaman2.html'">💖 Love</button>
+  <!-- Tombol untuk aktifkan musik -->
+  <button id="unmuteBtn" class="love-button">Putar Musik</button>
 
-  <!-- Musik MP3 otomatis jalan dan looping -->
-  <audio src="musik.mp3" autoplay loop></audio>
+  <!-- Musik autoplay mute dulu -->
+  <audio id="musik" src="musik.mp3" autoplay loop muted></audio>
+
+  <script>
+    const musik = document.getElementById('musik');
+    const btn = document.getElementById('unmuteBtn');
+
+    btn.addEventListener('click', () => {
+      musik.muted = false;  // buka mute supaya suara keluar
+      musik.play();         // mainkan musik
+      btn.style.display = 'none'; // sembunyikan tombol setelah klik
+    });
+  </script>
 
 </body>
 </html>
